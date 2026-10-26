@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
   <meta name="theme-color" content="#f5f6fa">
   <meta name="description" content="Finanzas personales y calendario privado que funciona sin conexión.">
   <link rel="manifest" href="manifest.json">
@@ -30,7 +30,9 @@
       <div class="section-title movements-head"><div><h2>Movimientos</h2><p id="movement-count"></p></div><button class="primary small" id="add-movement">＋ Añadir</button></div>
       <div class="filters"><select id="category-filter" aria-label="Filtrar por categoría"><option value="">Todas las categorías</option></select></div>
       <div id="movements-list" class="cards"></div>
-      <details class="settings panel"><summary>Copias de seguridad y categorías</summary><div class="settings-body"><p>Los datos se guardan automáticamente en este dispositivo.</p><div class="button-row"><button class="secondary" id="export-btn">Exportar copia JSON</button><button class="secondary" id="import-btn">Importar copia</button><input id="import-file" type="file" accept="application/json,.json" hidden></div><div class="add-category"><input id="new-category" placeholder="Nueva categoría" maxlength="30"><button class="secondary" id="add-category">Añadir</button></div><div id="custom-categories" class="chips"></div></div></details>
+      <details class="settings panel"><summary>Copias de seguridad</summary><div class="settings-body"><p>Los datos se guardan automáticamente en este dispositivo.</p><div class="button-row"><button class="secondary" id="export-btn">Exportar copia JSON</button><button class="secondary" id="import-btn">Importar copia</button><input id="import-file" type="file" accept="application/json,.json" hidden></div></div></details>
+      <details class="settings panel"><summary>Categorías de finanzas</summary><div class="settings-body"><p>Crea o elimina categorías de ingresos y gastos, cada una con su color.</p><div class="category-create"><select id="new-fin-category-type" aria-label="Tipo de categoría"><option value="expense">Gasto</option><option value="income">Ingreso</option></select><input id="new-fin-category" placeholder="Nombre de categoría" maxlength="30"><input id="new-fin-color" type="color" value="#6658e8" aria-label="Color de categoría"><button class="secondary" id="add-fin-category">Añadir</button></div><div id="finance-categories" class="category-manager"></div></div></details>
+      <details class="settings panel"><summary>Categorías del calendario</summary><div class="settings-body"><p>Asigna una categoría y un color a tus eventos.</p><div class="category-create"><input id="new-cal-category" placeholder="Nombre de categoría" maxlength="30"><input id="new-cal-color" type="color" value="#6658e8" aria-label="Color de categoría"><button class="secondary" id="add-cal-category">Añadir</button></div><div id="calendar-categories" class="category-manager"></div></div></details>
     </section>
   </main>
   <nav class="bottom-nav" aria-label="Navegación principal"><button class="nav-item active" data-view="calendar"><span>▦</span><small>Calendario</small></button><button class="nav-item" data-view="finance"><span>◉</span><small>Finanzas</small></button></nav>
