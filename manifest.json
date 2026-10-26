@@ -1,0 +1,13 @@
+{
+  "name": "Mi día · Finanzas personales",
+  "short_name": "Mi día",
+  "description": "Calendario y finanzas personales privados, con uso sin conexión.",
+  "lang": "es-ES",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f5f6fa",
+  "theme_color": "#f5f6fa",
+  "icons": [{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
